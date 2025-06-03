@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Услуги — Штрих Э</title>
+    <link rel="stylesheet" href="{% static 'services/css/style.css' %}">
+</head>
+<body>
+
+<header class="banner">
+    <h1>Уведомления электронных услуг</h1>
+
+    <form method="get">
+        <input type="text" name="q" value="{{ query }}" placeholder="Поиск по названию">
+        <button type="submit">Искать</button>
+    </form>
+
+    <a class="btn-white" href="{% url 'menu' %}">Вернуться на главную</a>
+
+    {% if request.user.is_authenticated %}
+        <!-- POST‑форма, совместима с LogoutView (Django 5 требует POST) -->
+        <form action="{% url 'logout' %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="/accounts/login/">
+            <button class="btn-white" style="display:inline-block;">
+                Выйти&nbsp;({{ request.user.username }})
+            </button>
+        </form>
+    {% else %}
+        <a class="btn-white" href="{% url 'login' %}?next=/services/">Войти</a>
+    {% endif %}
+</header>
+
+<main>
+{% for s in services %}
+    <div class="card">
+        {% if s.image %}
+            <img src="{{ s.image.url }}" alt="{{ s.name }}">
+        {% else %}
+            <img src="{% static 'services/img/placeholder.png' %}" alt="{{ s.name }}">
+        {% endif %}
+
+        <span style="flex:1">{{ s.name }}</span>
+
+        <a href="{% url 'service_detail' s.slug %}" class="btn-white">Открыть</a>
+
+        {% if request.user.is_staff %}
+            <a href="{% url 'service_delete' s.slug %}" class="btn-green"
+               onclick="return confirm('Пометить услугу как удалённую?');">
+               Удалить
+            </a>
+        {% else %}
+            <form action="{% url 'service_notify' s.slug %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button class="btn-green">Отправить уведомление</button>
+            </form>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>Ничего не найдено</p>
+{% endfor %}
+</main>
+
+<footer class="footer">Байназаров Эрик Ильгизович</footer>
+</body>
+</html>

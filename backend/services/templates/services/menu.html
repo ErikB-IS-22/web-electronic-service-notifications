@@ -1,0 +1,17 @@
+{% extends 'services/base.html' %}
+
+{% block title %}Штрих Э — главное меню{% endblock %}
+
+{% block header %}
+<header class="banner">
+    <h1>Штрих Э</h1>
+    <p>Тема курсовой работы: Уведомления электронных услуг</p>
+</header>
+{% endblock %}
+
+{% block content %}
+<main class="menu-panel">
+    <a class="btn btn-green" href="{% url 'services_list' %}">Посмотреть услуги</a>
+    <a class="btn btn-green" href="#">Посмотреть заявки</a>   <!-- заглушка -->
+</main>
+{% endblock %}

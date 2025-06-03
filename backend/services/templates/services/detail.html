@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ service.name }} — Штрих Э</title>
+    <link rel="stylesheet" href="{% static 'services/css/style.css' %}">
+</head>
+<body>
+
+<header class="banner">
+    <h1>Детали услуги</h1>
+    <a class="btn-white" href="{% url 'services_list' %}">Назад к списку</a>
+</header>
+
+<main class="detail">
+    {% if service.image %}
+        <img src="{{ service.image.url }}" alt="{{ service.name }}">
+    {% else %}
+        <img src="{% static 'services/img/placeholder.png' %}" alt="{{ service.name }}">
+    {% endif %}
+
+    <h2>{{ service.name }}</h2>
+    <p>{{ service.description }}</p>
+
+    {% if request.user.is_staff %}
+        <a class="btn-green"
+           href="{% url 'service_delete' service.slug %}"
+           onclick="return confirm('Пометить услугу как удалённую?');">
+           Удалить услугу
+        </a>
+    {% else %}
+        <form action="{% url 'service_notify' service.slug %}" method="post">
+            {% csrf_token %}
+            <button class="btn-green">Отправить уведомление</button>
+        </form>
+    {% endif %}
+</main>
+
+<footer class="footer">Байназаров Эрик Ильгизович</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cd72ce2-0b74-452c-bcb2-07d78ac30173" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2wuYQAaoTPoFgCFVROHufngWPxy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/neiroseti3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.install.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\backend\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\backend\frontend\public" />
+      <recent name="D:\backend\frontend\src\components" />
+      <recent name="D:\backend\frontend\src\logo" />
+      <recent name="D:\backend\services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="backend" type="Python.DjangoServer" factoryName="Django server">
+      <module name="backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (backend)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cd72ce2-0b74-452c-bcb2-07d78ac30173" name="Changes" comment="" />
+      <created>1746892920304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746892920304</updated>
+      <workItem from="1746892922551" duration="58000" />
+      <workItem from="1746893003814" duration="862000" />
+      <workItem from="1746947596308" duration="10661000" />
+      <workItem from="1746963976144" duration="82000" />
+      <workItem from="1747057349616" duration="3155000" />
+      <workItem from="1747461687902" duration="4944000" />
+      <workItem from="1747484943685" duration="12075000" />
+      <workItem from="1747555893915" duration="7589000" />
+      <workItem from="1747564800524" duration="20000" />
+      <workItem from="1747565000487" duration="726000" />
+      <workItem from="1747565760708" duration="19000" />
+      <workItem from="1747565933618" duration="1060000" />
+      <workItem from="1747567658257" duration="19000" />
+      <workItem from="1747567795024" duration="48000" />
+      <workItem from="1747567952922" duration="183000" />
+      <workItem from="1747568396738" duration="61000" />
+      <workItem from="1747568472109" duration="47000" />
+      <workItem from="1747568537332" duration="118000" />
+      <workItem from="1747568691590" duration="101000" />
+      <workItem from="1747568830436" duration="199000" />
+      <workItem from="1747569138968" duration="524000" />
+      <workItem from="1747569688256" duration="74000" />
+      <workItem from="1747569782008" duration="46000" />
+      <workItem from="1747569833543" duration="438000" />
+      <workItem from="1747570293492" duration="2263000" />
+      <workItem from="1747572617046" duration="2250000" />
+      <workItem from="1747575147127" duration="2695000" />
+      <workItem from="1747581380686" duration="21000" />
+      <workItem from="1747581427588" duration="863000" />
+      <workItem from="1747582504938" duration="1144000" />
+      <workItem from="1747583790088" duration="1139000" />
+      <workItem from="1747715483768" duration="372000" />
+      <workItem from="1747757454451" duration="57000" />
+      <workItem from="1747902024745" duration="1255000" />
+      <workItem from="1748410480105" duration="654000" />
+      <workItem from="1748411918996" duration="29000" />
+      <workItem from="1748531635139" duration="4371000" />
+      <workItem from="1748594290728" duration="15562000" />
+      <workItem from="1748707232579" duration="8139000" />
+      <workItem from="1748762601695" duration="4679000" />
+      <workItem from="1748767976400" duration="5739000" />
+      <workItem from="1748794796924" duration="213000" />
+      <workItem from="1748869593545" duration="22000" />
+      <workItem from="1748934429272" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

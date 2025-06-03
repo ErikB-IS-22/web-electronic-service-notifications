@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Вход — Штрих Э</title>
+  <link rel="stylesheet" href="{% static 'services/css/style.css' %}">
+</head>
+<body>
+<header class="banner"><h1>Вход</h1></header>
+
+<main class="detail" style="max-width:320px">
+  {% if form.errors %}
+      <p style="color:red">Неверный логин или пароль</p>
+  {% endif %}
+
+  <form method="post">
+    {% csrf_token %}
+    <label>Имя пользователя<br>{{ form.username }}</label><br><br>
+    <label>Пароль<br>{{ form.password }}</label><br><br>
+    <button class="btn-green" type="submit">Войти</button>
+  </form>
+
+  <p>Нет аккаунта?
+     <a href="{% url 'register' %}">Зарегистрироваться</a></p>
+</main>
+</body>
+</html>
