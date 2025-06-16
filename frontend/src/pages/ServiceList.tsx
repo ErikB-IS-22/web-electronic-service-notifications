@@ -13,13 +13,51 @@ const ServiceList: React.FC = () => {
   const [draftId,  setDraftId]  = useState<number | null>(null);
   const [loading,  setLoading]  = useState(false);
 
-  /** загрузка каталога с учётом фильтров */
+  const mockServices: Service[] = [
+  {
+    id: 1,
+    name: 'Онлайн-платформа для художников',
+    slug: 'onlajn-platforma-dlya-hudozhnikov',
+    description: 'Уведомления о новых заказах, отзывах на работы, а также о предстоящих конкурсах и акциях.',
+    status: 'active',
+    image: ''
+  },
+  {
+    id: 2,
+    name: 'Магазин художественных материалов',
+    slug: 'magazin-hudozhestvennyh-materialov',
+    description: 'Уведомления о поступлении новых товаров, скидках и акциях на краски, холсты и другие материалы.',
+    status: 'active',
+    image: ''
+  },
+  {
+    id: 3,
+    name: 'Фонд поддержки молодых художников',
+    slug: 'fond-podderzhki-molodyh-hudozhnikov',
+    description: 'Уведомления о грантах, стипендиях и возможностях участия в программах поддержки.',
+    status: 'active',
+    image: ''
+  }
+];
+
+    /** загрузка каталога с учётом фильтров */
   const load = async (filters: Filters = {}) => {
     setLoading(true);
+    
     try {
       const data: ServiceListResponse = await fetchServices(filters);
-      setDraftId(data.draft_id);
-      setServices(data.services);
+      
+      // Если сервер вернул пустой массив услуг - используем моки
+      if (data.services && data.services.length === 0) {
+        setServices(mockServices);
+      } else {
+        setServices(data.services);
+        setDraftId(data.draft_id);
+      }
+    } catch (err) {
+      // В случае ошибки запроса также используем моки
+      setServices(mockServices);
+      console.error('Ошибка загрузки услуг:', err);
     } finally {
       setLoading(false);
     }
