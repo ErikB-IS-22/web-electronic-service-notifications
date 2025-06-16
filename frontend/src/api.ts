@@ -5,9 +5,42 @@ import {
 } from './types';
 
 // Services
-export const fetchServices = async (filters: Filters | undefined): Promise<ServiceListResponse> => {
-  const { data } = await api.get<ServiceListResponse>('/services/', { params: filters });
-  return data;
+export const fetchServices = async (filters: Filters = {}): Promise<ServiceListResponse> => {
+  // Имитация задержки сети
+  await new Promise(resolve => setTimeout(resolve, 500));
+  
+  // Моковые данные услуг
+  const mockServices: Service[] = [
+    {
+      id: 1,
+      name: 'Онлайн-платформа для художников',
+      slug: 'onlajn-platforma-dlya-hudozhnikov',
+      description: 'Уведомления о новых заказах, отзывах на работы, а также о предстоящих конкурсах и акциях.',
+      status: 'active',
+      image: ''
+    },
+    {
+      id: 2,
+      name: 'Магазин художественных материалов',
+      slug: 'magazin-hudozhestvennyh-materialov',
+      description: 'Уведомления о поступлении новых товаров, скидках и акциях на краски, холсты и другие материалы.',
+      status: 'active',
+      image: ''
+    },
+    {
+      id: 3,
+      name: 'Фонд поддержки молодых художников',
+      slug: 'fond-podderzhki-molodyh-hudozhnikov',
+      description: 'Уведомления о грантах, стипендиях и возможностях участия в программах поддержки.',
+      status: 'active',
+      image: ''
+    }
+  ];
+
+  return {
+    services: mockServices,
+    draft_id: 42 // Пример draft_id
+  };
 };
 
 export const fetchService = async (id: number): Promise<Service> =>
